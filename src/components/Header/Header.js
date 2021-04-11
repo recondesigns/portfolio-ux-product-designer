@@ -4,13 +4,15 @@ import { white } from '../../colors'
 import hamburgerIcon from '../../assets/icons/hamburger.svg'
 
 const HeaderContainer = styled.div`
+    box-sizing: border-box;
     position: fixed;
     top: 0px;
     left: 0px;
     right: 0px;
     height: 96px;
-    border: 1px solid lightblue;
+    // border: 1px solid lightblue;
     background: ${white.default};
+    z-index: 2;
     
     & > img {
         position: absolute;
