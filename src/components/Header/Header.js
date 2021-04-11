@@ -13,13 +13,14 @@ const HeaderContainer = styled.div`
     height: 96px;
     // border: 1px solid lightblue;
     background: ${white.default};
+    display: ${props => props.display};
     z-index: 2;
     
     & > img {
         position: absolute;
         top: 60px;
         left: 24px;
-        border: 1px solid orange;
+        // border: 1px solid orange;
     }
 `
 
@@ -33,7 +34,7 @@ export default function Header() {
             setIsMenuOpen(() => false)
         }
     }
-  
+
     return (
         <HeaderContainer>
             <img 
