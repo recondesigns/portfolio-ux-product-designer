@@ -1,17 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import styled from 'styled-components'
 
-function App() {
+const AppContainer = styled.div`
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  border: 2px solid black;
+`
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Placeholder and boilderplate
-        </p>
-      </header>
-    </div>
-  );
+    <AppContainer>
+      <p>Hello</p>
+    </AppContainer>
+  )
 }
-
-export default App;
