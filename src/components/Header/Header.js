@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { AppContext } from '../../context/AppState'
 import { white } from '../../colors'
 import hamburgerIcon from '../../assets/icons/hamburger.svg'
 
@@ -23,9 +24,23 @@ const HeaderContainer = styled.div`
 `
 
 export default function Header() {
+    const [isMenuOpen, setIsMenuOpen] = useContext(AppContext)
+
+    function handleClick() {
+        if (isMenuOpen === false) {
+            setIsMenuOpen(() => true)
+        } else if (isMenuOpen === true) {
+            setIsMenuOpen(() => false)
+        }
+    }
+  
     return (
         <HeaderContainer>
-            <img src={hamburgerIcon} alt={'menu'} />
+            <img 
+                src={hamburgerIcon} 
+                alt={'menu'} 
+                onClick={() => handleClick()}
+            />
         </HeaderContainer>
     )
 }

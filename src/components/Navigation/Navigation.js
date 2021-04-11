@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { AppContext } from '../../context/AppState'
+
 import hamburgerClosedIcon from '../../assets/icons/hamburger-closed.svg'
 import { black, white } from '../../colors/'
 
@@ -8,7 +10,8 @@ const NavigationContainer = styled.div`
     box-sizing: border-box;
     position: absolute;
     top: 96px;
-    left: -400px;
+    // left: -400px;
+    left: ${props => props.left};
     width: 100%;
     height: 100%;
     background: ${white.default};
@@ -121,9 +124,25 @@ const NavigationContainer = styled.div`
 `
 
 export default function Navigation() {
+    const [isMenuOpen] = useContext(AppContext)
+    console.log(isMenuOpen)
+
+    function openCloseMenu() {
+        if (isMenuOpen === false) {
+            // console.log('it is false and not open')
+            return '-400px'
+        } else if (isMenuOpen === true) {
+            // console.log('it is true and is open')
+            return '0px'
+        }
+    }
+
+    let navPosition = openCloseMenu()
+
+    console.log(navPosition)
 
     return (
-        <NavigationContainer>
+        <NavigationContainer left={navPosition}>
             <img src={hamburgerClosedIcon} alt={'close'} />
             <p className={'label label-ux'}>{'UX Designer'}</p>
             <p className={'sub-item ux-one'}>{'Project name'}</p>
