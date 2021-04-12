@@ -69,7 +69,7 @@ export default function Header() {
                 alt={'menu'} 
                 onClick={() => handleClick()}
             />
-            <Link to={'/landing'} className={'home-link'} >{'Home'}</Link>
+            <Link to={'/'} className={'home-link'} >{'Home'}</Link>
         </HeaderContainer>
     )
 }
