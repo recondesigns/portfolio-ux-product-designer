@@ -30,6 +30,10 @@ const ControlContainer = styled.div`
         line-height: 20px;
         color: ${black.default}
         // border: 1px dotted orange;
+
+        @media (min-width: 768px) {
+            color: red;
+        }
     }
 `
 

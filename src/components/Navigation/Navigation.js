@@ -33,7 +33,7 @@ const NavigationContainer = styled.div`
         font-size: 18px;
         line-height: 24px;
         color: ${black.default};
-        border: 1px dotted orange;
+        // border: 1px dotted orange;
     }
 
     & > .label-ux {
@@ -62,7 +62,7 @@ const NavigationContainer = styled.div`
         align-items: center;
         color: ${black.default};
         text-decoration: none;
-        border: 1px dotted orange;
+        // border: 1px dotted orange;
 
         &:hover {
             font-weight: 500;
