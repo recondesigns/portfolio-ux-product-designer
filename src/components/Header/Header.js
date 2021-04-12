@@ -32,7 +32,7 @@ const HeaderContainer = styled.div`
         top: 60px;
         left: calc(50% - 120px/2);
         font-size: 20px;
-        color: lightcoral;
+        color: ${green.default};
         display: flex;
         justify-content: center;
         align-items: center;
