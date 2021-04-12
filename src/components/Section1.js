@@ -6,6 +6,8 @@ const SectionContainer = styled.div`
     // width: 100%;
     // height: 360px;
     // background: lightgrey;
+    overflow: hidden;
+    // border: 1px dotted orange;
 
     & > .heading {
         position: absolute;
