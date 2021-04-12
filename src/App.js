@@ -38,7 +38,7 @@ export default function App() {
       <Navigation />
       <div className={'switch-container'}>
         <Switch>
-          <Route exact path={'/landing'}><LandingPage /></Route>
+          <Route exact path={'/'}><LandingPage /></Route>
           <Route path={'/project-one'}><ProjectOne /></Route>
           <Route path={'/project-two'}><ProjectTwo /></Route>
           <Route path={'/project-three'}><ProjectThree /></Route>

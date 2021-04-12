@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Breadcrumb } from '../components/Breadcrumb'
 import { white } from '../colors/white'
 
 const PageContainer = styled.div`
@@ -12,17 +11,6 @@ const PageContainer = styled.div`
     background: ${white.default};
     border: 1px solid orange;
     z-index: 1;
-
-    & > .breadcrumb-wrapper {
-        position: absolute;
-        top: 4px;
-        left: 24px;
-        right: 24px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        // border: 1px dotted blue;
-    }
 
     & > .page-header {
         margin: 0px;
@@ -46,12 +34,7 @@ const PageContainer = styled.div`
 export default function LandingPage() {
     return (
         <PageContainer>
-            <div className={'breadcrumb-wrapper'}>
-            <Breadcrumb label={'Home'} />
-            <Breadcrumb label={'UX Designer'} />
-            <Breadcrumb label={'Fullstack Developer'} />
-            </div>
-            {/* <p className={'page-header'}>{'Project Name'}</p> */}
+            <p className={'page-header'}>{'Project Name'}</p>
             
         </PageContainer>
     )
