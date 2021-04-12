@@ -16,7 +16,7 @@ const ControlContainer = styled.div`
         margin: 0px 4px 0px 0px;
         height: 20px;
         width: 20px;
-        // border: 1px dotted orange;
+        border: 1px dotted orange;
     }
 
     & > p {
@@ -28,11 +28,11 @@ const ControlContainer = styled.div`
         font-weight: normal;
         font-size: 16px;
         line-height: 20px;
-        color: ${black.default}
-        // border: 1px dotted orange;
+        color: ${black.default};
+        border: 1px dotted orange;
 
         @media (min-width: 768px) {
-            color: red;
+            font-size: 18px;
         }
     }
 `

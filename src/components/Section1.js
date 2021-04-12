@@ -3,19 +3,16 @@ import styled from 'styled-components'
 import { black } from '../colors'
 
 const SectionContainer = styled.div`
-    // width: 100%;
-    // height: 360px;
-    // background: lightgrey;
     overflow: hidden;
-    // border: 1px dotted orange;
+    border: 1px dotted orange;
 
     & > .heading {
         position: absolute;
-        height: 24px;
         left: 24px;
         right: 108px;
         top: 60px;
         margin: 0px;
+        height: 24px;
         font-family: Roboto;
         font-style: normal;
         font-weight: 500;
@@ -24,7 +21,14 @@ const SectionContainer = styled.div`
         // display: flex;
         // align-items: center;
         color: ${black.default};
-        // border: 1px dotted orange;
+        border: 1px dotted orange;
+
+        @media (min-width: 768px) {
+            top: 56px;
+            left: 258px;
+            right: 598px;
+            font-size: 24px;
+        }
     }
 
     & > .body {
@@ -38,33 +42,67 @@ const SectionContainer = styled.div`
         font-size: 16px;
         line-height: 20px;
         color: ${black.default};
-        // border: 1px dotted orange;
+        border: 1px dotted orange;
+
+        @media (min-width: 768px) {
+            font-size: 20px;
+            font-size: 24px;
+        }
     }
 
     & > .p1 {
         top: 96px;
         left: 24px;
         right: 108px;
+
+        @media (min-width: 768px) {
+            top: 96px;
+            left: 258px;
+            right: 598px;
+            height: 72px;
+        }
     }
 
     & > .p2 {
         top: 168px;
         left: 24px;
         right: 108px;
+
+        @media (min-width: 768px) {
+            top: 184px;
+            left: 258px;
+            right: 598px;
+            height: 72px;
+        }
     }
 
     & > .p3 {
         top: 240px;
         left: 24px;
         right: 108px;
+
+        @media (min-width: 768px) {
+            top: 272px;
+            left: 258px;
+            right: 598px;
+            height: 72px;
+        }
     }
 
     & > img {
         position: absolute;
         top: calc(50% - 300px/2);
-        right: -68px;
+        left:272px;
+        // right: 0px;
         height: 300px;
         // border: 1px dotted orange;
+
+        // @media (min-width: 768px) {
+        //     top: 56px;
+        //     left: 598px;
+        //     right: 24px;
+        //     height: 72px;
+        // }
     }
 `
 

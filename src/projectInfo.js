@@ -1,4 +1,4 @@
-import section1Image from './assets/images/section1Image-2x.png'
+import section1Image from './assets/images/section1Image-1x.png'
 
 export const sectionInfo = {
     vaxxOverflow: {
