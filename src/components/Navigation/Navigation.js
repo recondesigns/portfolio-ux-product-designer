@@ -121,7 +121,6 @@ const NavigationContainer = styled.div`
 
 export default function Navigation() {
     const [isMenuOpen, setIsMenuOpen] = useContext(AppContext)
-    // console.log(isMenuOpen)
 
     function openCloseMenu() {
         if (isMenuOpen === false) {
