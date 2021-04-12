@@ -13,9 +13,6 @@ const ControlContainer = styled.div`
 
     & > img {
         box-sizing: border-box;
-        // position: absolute;
-        // top: 0px;
-        // left: 0px;
         margin: 0px 4px 0px 0px;
         height: 20px;
         width: 20px;
@@ -24,9 +21,6 @@ const ControlContainer = styled.div`
 
     & > p {
         box-sizing: border-box;
-        // position: absolute;
-        // top: 0px;
-        // left: 24px;
         margin: 0px;
         height: 20px;
         font-family: Roboto;
@@ -34,6 +28,7 @@ const ControlContainer = styled.div`
         font-weight: normal;
         font-size: 16px;
         line-height: 20px;
+        color: ${black.default}
         // border: 1px dotted orange;
     }
 `
