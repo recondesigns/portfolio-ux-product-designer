@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import PageControls from '../components/PageControls'
-import Section1 from '../components/Section1'
-import { sectionInfo } from '../projectInfo'
 import { white, black } from '../colors'
 
 const PageContainer = styled.div`
@@ -57,18 +55,14 @@ const PageContainer = styled.div`
         right: 0px;
         height: 360px;
         background: ${white.dark};
+
+        @media (min-width: 768px) {
+            height: 400px;
+        }
     }
 `
 
 export default function LandingPage() {
-    const newSectionInfo = {...sectionInfo}
-    const { 
-        heading,
-        paragraph1,
-        paragraph2,
-        paragraph3,
-        image 
-    } = newSectionInfo.vaxxOverflow.section1
 
     return (
         <PageContainer>
@@ -77,15 +71,6 @@ export default function LandingPage() {
                 <PageControls className={'control-one'} icon={'figma'} label={'View on Figma'} />
                 <PageControls className={'control-two'} icon={'github'} label={'View on GitHub'} />
             </div>
-            <Section1 
-                className={'first-section'}
-                heading={heading}
-                p1={paragraph1}
-                p2={paragraph2}
-                p3={paragraph3}
-                image={image}
-                altText={'here is some alt text'}
-            />
         </PageContainer>
     )
 }
