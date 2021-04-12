@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import { Switch, Route } from 'react-router-dom'
 import { Header } from './components/Header'
 import { Navigation } from './components/Navigation'
-import LandingPage from './pages/LandingPage'
-import Contact from './pages/Contact'
+import { LandingPage, ProjectOne, ProjectTwo, ProjectThree } from './pages'
 
 const AppContainer = styled.div`
   position: absolute;
@@ -13,6 +12,7 @@ const AppContainer = styled.div`
   right: 0px;
   box-sizing: border-box;
   height: 100vh;
+  z-index: 2;
   // border: 2px solid black;
 
   & > p {
@@ -39,7 +39,9 @@ export default function App() {
       <div className={'switch-container'}>
         <Switch>
           <Route exact path={'/landing'}><LandingPage /></Route>
-          <Route path={'/contact'}><Contact /></Route>
+          <Route path={'/project-one'}><ProjectOne /></Route>
+          <Route path={'/project-two'}><ProjectTwo /></Route>
+          <Route path={'/project-three'}><ProjectThree /></Route>
         </Switch>
       </div>   
     </AppContainer>

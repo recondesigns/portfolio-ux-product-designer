@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Breadcrumb } from '../components/Breadcrumb'
 import { white } from '../colors/white'
 
 const PageContainer = styled.div`
@@ -14,11 +13,10 @@ const PageContainer = styled.div`
     z-index: 1;
 `
 
-export default function LandingPage() {
+export default function ProjectTwo() {
     return (
         <PageContainer>
-            <p>Landing page</p>
-            <Breadcrumb />
+            <p>Project two page</p>
         </PageContainer>
     )
 }

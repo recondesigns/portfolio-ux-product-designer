@@ -1,22 +1,22 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import { AppContext } from '../../context/AppState'
 // import hamburgerClosedIcon from '../../assets/icons/hamburger-closed.svg'
 import { black, white } from '../../colors/'
 
 const NavigationContainer = styled.div`
-    postion: relative;
+    postion: absolute;
     box-sizing: border-box;
     position: absolute;
     top: 96px;
-    // left: -400px;
-    left: ${props => props.left};
-    width: 100%;
+    left: 0px;
+    right: 0px;
     height: 100%;
     background: ${white.default};
-    // display: none;
+    display: ${props => props.display};
     // border: 1px dotted red;
-    z-index: 1;
+    z-index: 2;
 
     & > img {
         position: absolute;
@@ -26,13 +26,14 @@ const NavigationContainer = styled.div`
     }
     
     & > .label {
+        margin: 0px;
         font-family: Roboto;
         font-style: normal;
         font-weight: 700;
         font-size: 18px;
         line-height: 24px;
         color: ${black.default};
-        // border: 1px dotted orange;
+        border: 1px dotted orange;
     }
 
     & > .label-ux {
@@ -51,29 +52,25 @@ const NavigationContainer = styled.div`
         top: 188px;
     }
 
-    & > .sub-item {
-        // position: absolute;
-        // height: 24px;
-        // left: 40px;
-        // right: 24px;
-        // top: 96px;
+    & > a {
         font-family: Roboto;
         font-style: normal;
-        // font-weight: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
         display: flex;
         align-items: center;
         color: ${black.default};
-        // border: 1px dotted orange;
+        text-decoration: none;
+        border: 1px dotted orange;
 
         &:hover {
             font-weight: 500;
+            // text-decoration: underline;
         }
     }
 
-    & > .ux-one {
+    & > .ux-project-one {
         position: absolute;
         height: 24px;
         left: 40px;
@@ -81,7 +78,7 @@ const NavigationContainer = styled.div`
         top: 96px;
     }
 
-    & > .ux-two {
+    & > .ux-project-two {
         position: absolute;
         height: 24px;
         left: 40px;
@@ -89,7 +86,7 @@ const NavigationContainer = styled.div`
         top: 124px;
     }
 
-    & > .ux-three {
+    & > .ux-project-three {
         position: absolute;
         height: 24px;
         left: 40px;
@@ -97,61 +94,66 @@ const NavigationContainer = styled.div`
         top: 152px;
     }
 
-    & > .dev-one {
-        position: absolute;
-        height: 24px;
-        left: 40px;
-        right: 24px;
-        top: 216px;
-    }
+    // & > .dev-one {
+    //     position: absolute;
+    //     height: 24px;
+    //     left: 40px;
+    //     right: 24px;
+    //     top: 216px;
+    // }
 
-    & > .dev-two {
-        position: absolute;
-        height: 24px;
-        left: 40px;
-        right: 24px;
-        top: 244px;
-    }
+    // & > .dev-two {
+    //     position: absolute;
+    //     height: 24px;
+    //     left: 40px;
+    //     right: 24px;
+    //     top: 244px;
+    // }
 
-    & > .dev-three {
-        position: absolute;
-        height: 24px;
-        left: 40px;
-        right: 24px;
-        top: 272px;
-    }
+    // & > .dev-three {
+    //     position: absolute;
+    //     height: 24px;
+    //     left: 40px;
+    //     right: 24px;
+    //     top: 272px;
+    // }
 `
 
 export default function Navigation() {
-    const [isMenuOpen] = useContext(AppContext)
+    const [isMenuOpen, setIsMenuOpen] = useContext(AppContext)
     // console.log(isMenuOpen)
 
     function openCloseMenu() {
         if (isMenuOpen === false) {
             // console.log('it is false and not open')
-            return '-400px'
+            return 'none'
         } else if (isMenuOpen === true) {
             // console.log('it is true and is open')
-            return '0px'
+            return 'block'
+        }
+    }
+
+    function closeMenu() {
+        if (isMenuOpen === true) {
+            setIsMenuOpen(() => false)
         }
     }
 
     let navPosition = openCloseMenu()
 
-    // console.log(navPosition)
-
     return (
-        <NavigationContainer left={navPosition}>
+        <NavigationContainer display={navPosition}>
             {/* <img src={hamburgerClosedIcon} alt={'close'} /> */}
             <p className={'label label-ux'}>{'UX Designer'}</p>
-            <p className={'sub-item ux-one'}>{'Project name'}</p>
-            <p className={'sub-item ux-two'}>{'Project name'}</p>
-            <p className={'sub-item ux-three'}>{'Project name'}</p>
+            <Link to={'/project-one'} className={'ux-project-one'} onClick={() => closeMenu()} >{'Project One'}</Link>
+            <Link to={'/project-two'} className={'ux-project-two'} onClick={() => closeMenu()} >{'Project Two'}</Link>
+            <Link to={'/project-three'} className={'ux-project-three'} onClick={() => closeMenu()} >{'Project Three'}</Link>
 
-            <p className={'label label-dev'}>{'UX Designer'}</p>
-            <p className={'sub-item dev-one'}>{'Project name'}</p>
-            <p className={'sub-item dev-two'}>{'Project name'}</p>
-            <p className={'sub-item dev-three'}>{'Project name'}</p>
+
+            <p className={'label label-dev'}>{'Fullstack Dev'}</p>
+            {/* <p className={'sub-item dev-one'}>{'Project name'}</p> */}
+            {/* <p className={'sub-item dev-two'}>{'Project name'}</p> */}
+            {/* <p className={'sub-item dev-three'}>{'Project name'}</p> */}
 
         </NavigationContainer>
     )
