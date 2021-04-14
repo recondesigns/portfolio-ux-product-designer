@@ -84,7 +84,6 @@ export default function LandingPage() {
             <SliceOne 
                 className={'top-slice'} 
                 heading={'The heading'}
-
             />
         </PageContainer>
     )

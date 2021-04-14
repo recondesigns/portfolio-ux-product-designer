@@ -8,6 +8,10 @@ const SliceContainer = styled.div`
     height: auto;
     border: 1px dashed black;
 
+    @media (min-width: 768px) {
+        padding: 56px 380px 56px 380px
+    }
+
     & > .heading {
         margin: 0px;
         // width: 328px;
@@ -30,6 +34,11 @@ const SliceContainer = styled.div`
     & > .heading-bottom {
         margin-top: 40px;
         margin-bottom: 8px;
+
+        @media (min-width: 768px) {
+            // color: red;
+            margin-top: 20px;
+        }
     }
 
     & > .body {
