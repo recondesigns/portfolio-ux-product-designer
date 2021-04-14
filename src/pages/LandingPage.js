@@ -8,11 +8,20 @@ const PageContainer = styled.div`
     box-sizing: border-box;
     position: absolute;
     top: 0px;
-    width: 100%;
-    height: 100%;
+    left: 24px;
+    right: 24px;
+    // width: 100%;
+    // height: 100%;
+    height: auto;
     background: ${white.default};
     z-index: 1;
-    // border: 1px solid orange;
+    border: 1px dashed orange;
+
+    @media (min-width: 768px) {
+        color: red;
+        left: 260px;
+        // margin-top: 20px;
+    }
 
     & > .page-header {
         margin: 0px;
@@ -50,10 +59,10 @@ const PageContainer = styled.div`
     }
 
     & > .first-section {
-        position: absolute;
-        top: 156px;
-        left: 0px;
-        right: 0px;
+        // position: absolute;
+        // top: 156px;
+        // left: 0px;
+        // right: 0px;
         height: 360px;
         background: ${white.dark};
 
@@ -67,7 +76,6 @@ const PageContainer = styled.div`
         top: 196px;
         left: 0px;
         right: 0px;
-        // height: auto;
         // background: lightcoral;
     }
 `

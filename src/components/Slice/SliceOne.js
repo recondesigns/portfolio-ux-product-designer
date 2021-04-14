@@ -4,7 +4,6 @@ import { black } from '../../colors'
 
 const SliceContainer = styled.div`
     padding: 40px 24px 40px 24px;
-    // height: 300px;
     height: auto;
     border: 1px dashed black;
 

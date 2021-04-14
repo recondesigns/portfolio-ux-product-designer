@@ -9,14 +9,20 @@ const NavigationContainer = styled.div`
     postion: absolute;
     box-sizing: border-box;
     position: absolute;
+    width: 236px;
     top: 96px;
     left: 0px;
-    right: 0px;
+    // right: 0px;
     height: 100%;
     background: ${white.default};
-    display: ${props => props.display};
-    // border: 1px dotted red;
+    // display: ${props => props.display};
+    display: none;
+    border: 1px dotted red;
     z-index: 2;
+
+    @media (min-width: 768px) {
+        display: block;
+    }
 
     & > img {
         position: absolute;
