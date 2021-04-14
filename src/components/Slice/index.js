@@ -1,0 +1,1 @@
+export { default as SliceOne } from './SliceOne'

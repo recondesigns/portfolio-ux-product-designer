@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PageControls from '../components/PageControls'
+import { SliceOne } from '../components/Slice'
 import { white, black } from '../colors'
 
 const PageContainer = styled.div`
@@ -60,6 +61,15 @@ const PageContainer = styled.div`
             height: 400px;
         }
     }
+
+    & > .top-slice {
+        position: absolute;
+        top: 196px;
+        left: 0px;
+        right: 0px;
+        // height: auto;
+        // background: lightcoral;
+    }
 `
 
 export default function LandingPage() {
@@ -71,6 +81,11 @@ export default function LandingPage() {
                 <PageControls className={'control-one'} icon={'figma'} label={'View on Figma'} />
                 <PageControls className={'control-two'} icon={'github'} label={'View on GitHub'} />
             </div>
+            <SliceOne 
+                className={'top-slice'} 
+                heading={'The heading'}
+
+            />
         </PageContainer>
     )
 }
