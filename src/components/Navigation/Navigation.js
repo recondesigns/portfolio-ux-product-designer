@@ -13,11 +13,13 @@ const NavigationContainer = styled.div`
     top: 96px;
     left: 0px;
     // right: 0px;
-    height: 100%;
+    bottom: 0px;
+    // min-height: 100%;
+    height: auto;
     background: ${white.default};
     // display: ${props => props.display};
     display: none;
-    border: 1px dotted red;
+    // border: 1px dotted red;
     z-index: 2;
 
     @media (min-width: 768px) {

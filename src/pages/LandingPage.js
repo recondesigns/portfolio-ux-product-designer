@@ -11,19 +11,35 @@ const PageContainer = styled.div`
     top: 0px;
     left: 0px;
     right: 0px;
+    bottom: 0px;
+    // bottom: 20px;
+    // bottom: 0px;
     // min-height: 100%;
-    // height: auto;
-    background: ${white.default};
+    // min-height: 100%;
+    // height: 100%;
+    // height: 100%;
+    // min-height: 100%;
+    // background: ${white.default};
+    // background: red;
     z-index: 1;
-    border: 1px dashed black;
+    overflow: scroll;
+    // border: 1px dashed black;
 
-    // @media (min-width: 768px) {
-    //     color: red;
-    //     left: 260px;
-    //     margin-top: 20px;
-    // }
+    @media (min-width: 768px) {
+        // background: red;
+        left: 260px;
+        // margin-top: 20px;
+    }
 
     & > .first-slice {
+        background: ${white.default};
+    }
+
+    & > .second-slice {
+        background: ${white.dark};
+    }
+
+    & > .third-slice {
         background: ${white.default};
     }
 `
@@ -43,6 +59,24 @@ export default function LandingPage() {
             />
             <SliceOne 
                 className={'first-slice'}
+                headingOne={sliceOneInfo.headingOneText}
+                bodyOne={sliceOneInfo.bodyOneText}
+                headingTwo={sliceOneInfo.headingTwoText}
+                bodyTwo={sliceOneInfo.bodyTwoText}
+                image={sliceOneInfo.image}
+            />
+
+            <SliceOne 
+                className={'second-slice'}
+                headingOne={sliceOneInfo.headingOneText}
+                bodyOne={sliceOneInfo.bodyOneText}
+                headingTwo={sliceOneInfo.headingTwoText}
+                bodyTwo={sliceOneInfo.bodyTwoText}
+                image={sliceOneInfo.image}
+            />
+
+            <SliceOne 
+                className={'third-slice'}
                 headingOne={sliceOneInfo.headingOneText}
                 bodyOne={sliceOneInfo.bodyOneText}
                 headingTwo={sliceOneInfo.headingTwoText}

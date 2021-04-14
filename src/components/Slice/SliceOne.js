@@ -7,7 +7,12 @@ const SliceContainer = styled.div`
     padding: 40px 24px 40px 24px;
     height: auto;
     // background: lightgray;
-    border: 1px solid blue;
+    // border: 1px solid blue;
+
+    @media (min-width: 768px) {
+        padding: 56px 280px 56px 280px;
+        border-radius: 4px;
+    }
 
     & > .header {
         box-sizing: border-box;
@@ -22,7 +27,7 @@ const SliceContainer = styled.div`
         // display: flex;
         // align-items: center;
         color: ${black.default};
-        border: 1px dotted orange;
+        // border: 1px dotted orange;
     }
 
     & > .body {
@@ -36,7 +41,7 @@ const SliceContainer = styled.div`
         font-size: 16px;
         line-height: 20px;
         color: ${black.default};
-        border: 1px dotted orange;
+        // border: 1px dotted orange;
     }
 
     & > .body-bottom {
@@ -49,7 +54,7 @@ const SliceContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px dotted orange;
+        // border: 1px dotted orange;
 
         & > img {
             height: 200px;

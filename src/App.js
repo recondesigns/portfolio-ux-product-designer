@@ -10,10 +10,13 @@ const AppContainer = styled.div`
   top: 0px;
   left: 0px;
   right: 0px;
+  bottom: 0px;
   box-sizing: border-box;
-  height: 100%;
+  // height: auto;
+  // height: 100vh;
+  // height: 100%;
   z-index: 2;
-  // border: 2px solid black;
+  // border: 2px solid purple;
 
   & > p {
     position: absolute;
@@ -24,6 +27,9 @@ const AppContainer = styled.div`
     box-sizing: border-box;
     position: absolute;
     top: 96px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     // height: auto;
     width: 100%;
     // border: 1px solid black;

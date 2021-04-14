@@ -12,7 +12,13 @@ const PageHeaderContainer = styled.div`
     // left: 0px;
     // right: 0px;
     height: auto;
-    border: 1px solid blue;
+    // border: 1px solid blue;
+
+    @media (min-width: 768px) {
+        // padding: 56px 280px 56px 280px;
+        padding-left: 280px;
+        padding-right: 280px;
+    }
 
     & > .page-header {
         box-sizing: border-box;
@@ -30,7 +36,7 @@ const PageHeaderContainer = styled.div`
         display: flex;
         align-items: center;
         color: ${black.default};
-        border: 1px dotted orange;
+        // border: 1px dotted orange;
     }
 
     & > .controls-wrapper {
@@ -43,7 +49,7 @@ const PageHeaderContainer = styled.div`
         align-items: center;
         height: 20px;
         // background: lightgray;
-        border: 1px dotted orange;
+        // border: 1px dotted orange;
 
         & > .one {
             margin-right: 8px;

@@ -21,8 +21,11 @@ const HeaderContainer = styled.div`
         position: absolute;
         top: 60px;
         left: 24px;
-
         // border: 1px solid orange;
+
+        @media (min-width: 768px) {
+            visibility: hidden;
+        }
     }
 
     & > .home-link {
