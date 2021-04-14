@@ -15,7 +15,6 @@ const HeaderContainer = styled.div`
     height: 96px;
     // border: 1px solid lightblue;
     background: ${white.default};
-    // z-index: 2;
     
     & > img {
         position: absolute;

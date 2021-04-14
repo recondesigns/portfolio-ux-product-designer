@@ -12,15 +12,13 @@ const NavigationContainer = styled.div`
     width: 236px;
     top: 96px;
     left: 0px;
-    // right: 0px;
     bottom: 0px;
-    // min-height: 100%;
     height: auto;
     background: ${white.default};
     // display: ${props => props.display};
     display: none;
-    // border: 1px dotted red;
     z-index: 2;
+    // border: 1px dotted red;
 
     @media (min-width: 768px) {
         display: block;
@@ -101,30 +99,6 @@ const NavigationContainer = styled.div`
         right: 24px;
         top: 152px;
     }
-
-    // & > .dev-one {
-    //     position: absolute;
-    //     height: 24px;
-    //     left: 40px;
-    //     right: 24px;
-    //     top: 216px;
-    // }
-
-    // & > .dev-two {
-    //     position: absolute;
-    //     height: 24px;
-    //     left: 40px;
-    //     right: 24px;
-    //     top: 244px;
-    // }
-
-    // & > .dev-three {
-    //     position: absolute;
-    //     height: 24px;
-    //     left: 40px;
-    //     right: 24px;
-    //     top: 272px;
-    // }
 `
 
 export default function Navigation() {
@@ -161,7 +135,6 @@ export default function Navigation() {
             {/* <p className={'sub-item dev-one'}>{'Project name'}</p> */}
             {/* <p className={'sub-item dev-two'}>{'Project name'}</p> */}
             {/* <p className={'sub-item dev-three'}>{'Project name'}</p> */}
-
         </NavigationContainer>
     )
 }

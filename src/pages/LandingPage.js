@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { sectionInfo } from '../projectInfo'
 import PageHeader from '../components/PageHeader'
 import { SliceOne } from '../components/Slice'
-import { black, white } from '../colors'
+import { white } from '../colors'
 
 const PageContainer = styled.div`
     box-sizing: border-box;
@@ -12,23 +12,13 @@ const PageContainer = styled.div`
     left: 0px;
     right: 0px;
     bottom: 0px;
-    // bottom: 20px;
-    // bottom: 0px;
-    // min-height: 100%;
-    // min-height: 100%;
-    // height: 100%;
-    // height: 100%;
-    // min-height: 100%;
-    // background: ${white.default};
-    // background: red;
+    background: ${white.default};
     z-index: 1;
     overflow: scroll;
     // border: 1px dashed black;
 
     @media (min-width: 768px) {
-        // background: red;
         left: 260px;
-        // margin-top: 20px;
     }
 
     & > .first-slice {
@@ -47,8 +37,6 @@ const PageContainer = styled.div`
 export default function LandingPage() {
     const { sectionOne } = sectionInfo.vaxxOverflow
     const sliceOneInfo = {...sectionOne}
-
-    console.log(sliceOneInfo)
 
     return (
         <PageContainer>

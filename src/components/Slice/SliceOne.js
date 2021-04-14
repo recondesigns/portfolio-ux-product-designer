@@ -6,7 +6,6 @@ const SliceContainer = styled.div`
     box-sizing: border-box;
     padding: 40px 24px 40px 24px;
     height: auto;
-    // background: lightgray;
     // border: 1px solid blue;
 
     @media (min-width: 768px) {
@@ -24,8 +23,6 @@ const SliceContainer = styled.div`
         font-weight: 500;
         font-size: 20px;
         line-height: 24px;
-        // display: flex;
-        // align-items: center;
         color: ${black.default};
         // border: 1px dotted orange;
     }
@@ -77,8 +74,7 @@ export default function SliceOne(props) {
             <p className={'header header-bottom'}>{headingOne}</p>
             <p className={'body body-bottom'}>{bodyOne}</p>
             <div className={'image-wrapper'}>
-                {/* <p>Image</p> */}
-                <img src={image} alt={'preview image'} />
+                <img src={image} alt={'preview'} />
             </div>
         </SliceContainer>
     )
