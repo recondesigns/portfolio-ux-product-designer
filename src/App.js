@@ -11,7 +11,7 @@ const AppContainer = styled.div`
   left: 0px;
   right: 0px;
   box-sizing: border-box;
-  height: 100vh;
+  height: 100%;
   z-index: 2;
   // border: 2px solid black;
 
@@ -24,7 +24,7 @@ const AppContainer = styled.div`
     box-sizing: border-box;
     position: absolute;
     top: 96px;
-    height: 100%;
+    // height: auto;
     width: 100%;
     // border: 1px solid black;
   }

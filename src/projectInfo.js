@@ -1,13 +1,15 @@
-import section1Image from './assets/images/section1Image-1x.png'
+// import section1Image from './assets/images/section1Image-1x.png'
+import sectionOneImage from './assets/images/section1Image-1x.png'
 
 export const sectionInfo = {
     vaxxOverflow: {
-        section1: {
-            heading: 'Heading here',
-            paragraph1: 'Here is a description of the client, and the issue they were were encountering. ',
-            paragraph2: 'Here is a statement of what the solution was. Should really try to add a third line here.',
-            paragraph3: 'Short statement of the results. Should put enough for a third line in here to see how it looks.',
-            image: section1Image
+        sectionOne: {
+            name: 'Vaxx Overflow',
+            headingOneText: 'The problem',
+            bodyOneText: 'Snackmagic is a snackbox gifting service. It allows individuals to place orders which then the recipients can customize their orders by following a link to the Snackmagic site. After launching in April 2020, we were experiencing a high drop-off rate in the checkout flow.',
+            headingTwoText: 'The solution',
+            bodyTwoText: 'Snackmagic is a snackbox gifting service. It allows individuals to place orders which then the recipients can customize their orders by following a link to the Snackmagic site. After launching in April 2020, we were experiencing a high drop-off rate in the checkout flow.',
+            image: sectionOneImage
         }
     }
 }
