@@ -58,19 +58,6 @@ const PageContainer = styled.div`
         }
     }
 
-    & > .first-section {
-        // position: absolute;
-        // top: 156px;
-        // left: 0px;
-        // right: 0px;
-        height: 360px;
-        background: ${white.dark};
-
-        @media (min-width: 768px) {
-            height: 400px;
-        }
-    }
-
     & > .top-slice {
         position: absolute;
         top: 196px;
