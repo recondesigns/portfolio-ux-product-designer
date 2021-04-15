@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { AppContext } from '../../context/AppState'
-import { white, green } from '../../colors'
+import { white } from '../../colors'
 import hamburgerIcon from '../../assets/icons/hamburger.svg'
 import closeIcon from '../../assets/icons/hamburger-closed.svg'
 
