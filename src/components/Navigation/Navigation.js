@@ -9,19 +9,21 @@ const NavigationContainer = styled.div`
     postion: absolute;
     box-sizing: border-box;
     position: absolute;
-    width: 236px;
+    // width: 236px;
     top: 96px;
     left: 0px;
+    right: 0px;
     bottom: 0px;
     height: auto;
     background: ${white.default};
-    // display: ${props => props.display};
-    display: none;
+    display: ${props => props.display};
+    // display: none;
     z-index: 2;
     // border: 1px dotted red;
 
     @media (min-width: 768px) {
         display: block;
+        width: 236px;
     }
 
     & > img {
@@ -35,7 +37,7 @@ const NavigationContainer = styled.div`
         margin: 0px;
         font-family: Roboto;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 18px;
         line-height: 24px;
         color: ${black.default};
