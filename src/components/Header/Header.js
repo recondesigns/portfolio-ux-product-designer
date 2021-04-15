@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 import { AppContext } from '../../context/AppState'
 import { white, green } from '../../colors'
 import hamburgerIcon from '../../assets/icons/hamburger.svg'
@@ -26,21 +25,6 @@ const HeaderContainer = styled.div`
         @media (min-width: 768px) {
             visibility: hidden;
         }
-    }
-
-    & > .home-link {
-        width: 120px;
-        height: 20px;
-        position: absolute;
-        top: 60px;
-        left: calc(50% - 120px/2);
-        font-size: 20px;
-        color: ${green.default};
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        // border: 1px dotted orange;
     }
 `
 
@@ -72,7 +56,6 @@ export default function Header() {
                 alt={'menu'} 
                 onClick={() => handleClick()}
             />
-            <Link to={'/'} className={'home-link'} >{'Home'}</Link>
         </HeaderContainer>
     )
 }
