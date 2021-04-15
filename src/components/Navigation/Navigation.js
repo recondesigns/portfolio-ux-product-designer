@@ -128,6 +128,7 @@ export default function Navigation() {
         <NavigationContainer display={navPosition}>
             {/* <img src={hamburgerClosedIcon} alt={'close'} /> */}
             <p className={'label label-ux'}>{'UX Designer'}</p>
+            {/* <Link to={'/'} className={'ux-project-one'} onClick={() => closeMenu()} >{'Home'}</Link> */}
             <Link to={'/project-one'} className={'ux-project-one'} onClick={() => closeMenu()} >{'Project One'}</Link>
             <Link to={'/project-two'} className={'ux-project-two'} onClick={() => closeMenu()} >{'Project Two'}</Link>
             <Link to={'/project-three'} className={'ux-project-three'} onClick={() => closeMenu()} >{'Project Three'}</Link>

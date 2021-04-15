@@ -38,6 +38,7 @@ const ControlContainer = styled.div`
 `
 
 export default function PageControls(props) {
+    // let figmaLink = 'https://www.figma.com/proto/JhhHkIswpe0EzcVcVtzB7A/VaxxOverflow?page-id=188%3A4407&node-id=188%3A4408&viewport=655%2C467%2C0.2958570718765259&scaling=scale-down'
     const { label, icon, className } = props
 
     function setIcon() {
@@ -55,7 +56,7 @@ export default function PageControls(props) {
     return (
         <ControlContainer className={className}>
             <img src={controlIcon} alt={label} />
-            <p className={'control-label'}>{label}</p>
+            {/* <p className={'control-label'}>{label}</p> */}
         </ControlContainer>
     )
 }
