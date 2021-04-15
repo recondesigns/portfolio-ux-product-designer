@@ -5,14 +5,11 @@ import { black, white } from '../../colors'
 const StyledButton = styled.button`
     margin: 0px 0px 0px 0px;
     padding: 8px 16px 8px 16px;
-    // width: auto;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    // display: flex;
-    // align-items: center;
     color: ${white.default};
     background: ${black.default};
     border: 2px solid ${white.default};

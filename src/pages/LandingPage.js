@@ -19,11 +19,6 @@ const PageContainer = styled.div`
         right: 24px;
         left: 260px;
     }
-
-    & > .hero-slice {
-        
-        // border: 1px dashed red;
-    }
 `
 
 export default function LandingPage() {

@@ -4,18 +4,16 @@ import { Button } from '../Button'
 import { black, white } from '../../colors'
 
 const HeroContainer = styled.div`
-    // box-sizing: border-box;
     position: relative;
     padding: 64px 24px 64px 24px;
     max-width: 100%;
-    // height: auto;
+    height: auto;
     background: ${black.default};
     // border: 1px solid green;
 
     @media (min-width: 768px) {
         width: 100%;
         padding: 80px 118px 80px 118px;
-        // background: red;
     }
 
     & > .heading {
@@ -32,7 +30,6 @@ const HeroContainer = styled.div`
 
         @media (min-width: 768px) {
             width: 566px;
-            // background: red;
         }
     }
 
@@ -48,13 +45,13 @@ const HeroContainer = styled.div`
 
         @media (min-width: 768px) {
             width: 566px;
-            // background: red;
         }
     }
 `
 
 export default function HeroSlice(props) {
     const { heading, body, className } = props
+    
     return (
         <HeroContainer className={className}>
             <p className={'heading'}>{heading}</p>
