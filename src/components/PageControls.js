@@ -56,7 +56,7 @@ export default function PageControls(props) {
     return (
         <ControlContainer className={className}>
             <img src={controlIcon} alt={label} />
-            {/* <p className={'control-label'}>{label}</p> */}
+            <p className={'control-label'}>{label}</p>
         </ControlContainer>
     )
 }
