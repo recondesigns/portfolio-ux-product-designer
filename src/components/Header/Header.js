@@ -14,6 +14,7 @@ const HeaderContainer = styled.div`
     right: 0px;
     height: 96px;
     // border: 1px solid lightblue;
+    z-index: 3;
     background: ${white.default};
     
     & > img {

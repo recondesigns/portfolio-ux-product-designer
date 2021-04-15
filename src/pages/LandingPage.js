@@ -1,8 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { sectionInfo } from '../projectInfo'
-import PageHeader from '../components/PageHeader'
-import { SliceOne } from '../components/Slice'
 import { white } from '../colors'
 
 const PageContainer = styled.div`
@@ -21,56 +18,26 @@ const PageContainer = styled.div`
         left: 260px;
     }
 
-    & > .first-slice {
-        background: ${white.default};
-    }
-
-    & > .second-slice {
-        background: ${white.dark};
-    }
-
-    & > .third-slice {
-        background: ${white.default};
+    & > p {
+        position: absolute;
+        top: calc(50% - 24px/2);
+        left: 0px;
+        right: 0px;
+        margin: 0p;x
+        width: 200px;
+        height: 24px;
+        font-size: 24px;
+        line-height: 24px;
+        text-align: center;
+        // border: 1px dotted orange;
     }
 `
 
 export default function LandingPage() {
-    const { sectionOne } = sectionInfo.vaxxOverflow
-    const sliceOneInfo = {...sectionOne}
 
     return (
         <PageContainer>
-            <PageHeader 
-                heading={sliceOneInfo.name}
-                controlOne={{iconOne: 'figma', labelOne: 'View on Figma'}}
-                controlTwo={{iconTwo: 'github', labelTwo: 'View on GitHub'}}
-            />
-            <SliceOne 
-                className={'first-slice'}
-                headingOne={sliceOneInfo.headingOneText}
-                bodyOne={sliceOneInfo.bodyOneText}
-                headingTwo={sliceOneInfo.headingTwoText}
-                bodyTwo={sliceOneInfo.bodyTwoText}
-                image={sliceOneInfo.image}
-            />
-
-            <SliceOne 
-                className={'second-slice'}
-                headingOne={sliceOneInfo.headingOneText}
-                bodyOne={sliceOneInfo.bodyOneText}
-                headingTwo={sliceOneInfo.headingTwoText}
-                bodyTwo={sliceOneInfo.bodyTwoText}
-                image={sliceOneInfo.image}
-            />
-
-            <SliceOne 
-                className={'third-slice'}
-                headingOne={sliceOneInfo.headingOneText}
-                bodyOne={sliceOneInfo.bodyOneText}
-                headingTwo={sliceOneInfo.headingTwoText}
-                bodyTwo={sliceOneInfo.bodyTwoText}
-                image={sliceOneInfo.image}
-            />
+            <p>Landing Page</p>
         </PageContainer>
     )
 }
