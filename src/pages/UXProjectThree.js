@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { sectionInfo } from '../projectInfo'
-import { SliceOne } from '../components/Slice'
+// import { SliceOne } from '../components/Slice'
 import PageHeader from '../components/PageHeader'
 import { white } from '../colors/white'
 
