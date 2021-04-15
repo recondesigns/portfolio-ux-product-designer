@@ -42,32 +42,32 @@ export default function ProjectThree() {
                 controlTwo={{iconTwo: 'github', labelTwo: 'View on GitHub'}}
             />
 
-            <SliceOne 
+            {/* <SliceOne 
                 className={'first-slice'}
                 headingOne={sliceOneInfo.headingOneText}
                 bodyOne={sliceOneInfo.bodyOneText}
                 headingTwo={sliceOneInfo.headingTwoText}
                 bodyTwo={sliceOneInfo.bodyTwoText}
                 image={sliceOneInfo.image}
-            />
+            /> */}
 
-            <SliceOne 
+            {/* <SliceOne 
                 className={'second-slice'}
                 headingOne={sliceOneInfo.headingOneText}
                 bodyOne={sliceOneInfo.bodyOneText}
                 headingTwo={sliceOneInfo.headingTwoText}
                 bodyTwo={sliceOneInfo.bodyTwoText}
                 image={sliceOneInfo.image}
-            />
+            /> */}
 
-            <SliceOne 
+            {/* <SliceOne 
                 className={'third-slice'}
                 headingOne={sliceOneInfo.headingOneText}
                 bodyOne={sliceOneInfo.bodyOneText}
                 headingTwo={sliceOneInfo.headingTwoText}
                 bodyTwo={sliceOneInfo.bodyTwoText}
                 image={sliceOneInfo.image}
-            />
+            /> */}
         </PageContainer>
     )
 }

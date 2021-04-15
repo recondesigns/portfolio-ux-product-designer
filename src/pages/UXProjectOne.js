@@ -22,7 +22,7 @@ const PageContainer = styled.div`
     }
 
     & > .second-slice {
-        background: ${white.dark};
+        background: ${white.default};
     }
 
     & > .third-slice {
@@ -33,22 +33,30 @@ const PageContainer = styled.div`
 export default function ProjectOne() {
     const { sectionOne } = sectionInfo.vaxxOverflow
     const sliceOneInfo = {...sectionOne}
+    const {
+        name,
+        headingOneText,
+        bodyOneText,
+        headingTwoText,
+        bodyTwoText,
+        image
+    } = sliceOneInfo
 
     return (
         <PageContainer>
             <PageHeader 
-                heading={sliceOneInfo.name}
+                heading={name}
                 controlOne={{iconOne: 'figma', labelOne: 'View on Figma'}}
                 controlTwo={{iconTwo: 'github', labelTwo: 'View on GitHub'}}
             />
 
             <SliceOne 
                 className={'first-slice'}
-                headingOne={sliceOneInfo.headingOneText}
-                bodyOne={sliceOneInfo.bodyOneText}
-                headingTwo={sliceOneInfo.headingTwoText}
-                bodyTwo={sliceOneInfo.bodyTwoText}
-                image={sliceOneInfo.image}
+                headingOne={headingOneText}
+                bodyOne={bodyOneText}
+                headingTwo={headingTwoText}
+                bodyTwo={bodyTwoText}
+                image={image}
             />
 
             <SliceOne 

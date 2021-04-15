@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { black } from '../../colors/black'
+import { black, white } from '../../colors/'
 
 const SliceContainer = styled.div`
     box-sizing: border-box;
     padding: 40px 24px 40px 24px;
     height: auto;
     // border: 1px solid blue;
+    // border: 2px solid ${white.dark};
 
     @media (min-width: 768px) {
         padding: 56px 280px 56px 280px;
@@ -47,14 +48,20 @@ const SliceContainer = styled.div`
 
     & > .image-wrapper {
         width: 100%;
-        height: 200px;
+        // height: 200px;
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
         // border: 1px dotted orange;
 
         & > img {
-            height: 200px;
+            height: 312px;
+
+            @media (min-width: 768px) {
+                height: 400px
+                // border: 1px dotted blue; 
+            }
         }
     }
 `
@@ -63,7 +70,9 @@ export default function SliceOne(props) {
     const { 
         className,
         headingOne,
+        headingTwo,
         bodyOne,
+        bodyTwo,
         image
     } = props
 
@@ -71,8 +80,8 @@ export default function SliceOne(props) {
         <SliceContainer className={className}>
             <p className={'header header-top'}>{headingOne}</p>
             <p className={'body body-top'}>{bodyOne}</p>
-            <p className={'header header-bottom'}>{headingOne}</p>
-            <p className={'body body-bottom'}>{bodyOne}</p>
+            <p className={'header header-bottom'}>{headingTwo}</p>
+            <p className={'body body-bottom'}>{bodyTwo}</p>
             <div className={'image-wrapper'}>
                 <img src={image} alt={'preview'} />
             </div>
