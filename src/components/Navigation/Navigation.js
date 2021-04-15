@@ -30,6 +30,10 @@ const NavigationContainer = styled.div`
             font-weight: 500;
             color: ${green.default};
         }
+
+        &:active {
+            text-decoration: underline;
+        }
     }
 
     & > .list-item {
@@ -50,6 +54,10 @@ const NavigationContainer = styled.div`
         &:hover {
             font-weight: 500;
             color: ${green.default};
+        }
+
+        &:active {
+            text-decoration: underline;
         }
     }
 `
