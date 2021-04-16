@@ -4,15 +4,17 @@ import { Button } from '../Button'
 import { black, green, white } from '../../colors'
 
 const CardContainer = styled.div`
+    margin-right: 20px;
     padding: 20px 20px 20px 20px;
-    width: 260px;
+    min-width: 260px;
     border: 1px solid #E6E6E6;
     background: ${white.default};
     border-left: 2px solid ${green.default};
     // border-radius: 4px;
 
     @media (min-width: 768px) {
-        width: 328px;
+        margin-right: 12px;
+        min-width: 328px;
     }
 
     & > .heading {
