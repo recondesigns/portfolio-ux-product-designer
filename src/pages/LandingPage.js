@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import { HeroSlice } from '../components/Slice'
 import { PrimaryCard } from '../components/Project Card'
 import { black, white } from '../colors'
@@ -46,6 +47,11 @@ const PageContainer = styled.div`
         align-items: center;
         // border: 2px dashed black;
         overflow: auto;
+
+        & > a {
+            text-decoration: none;
+            color: ${black.default};
+        }
     }
 `
 
@@ -60,12 +66,14 @@ export default function LandingPage() {
             />
             <p className={'heading'}>{'Featured projects'}</p>
             <div className={'card-list-wrapper'}>
-                <PrimaryCard 
-                    heading={'Vaxx Overflow'}
-                    body={'Eliminate wasted vaccine due to canceled appointments.'}
-                    project={'project-one'}
-                    buttonText={'View case study'}
-                />
+                <Link to={'/project-one'}>
+                    <PrimaryCard 
+                        heading={'Vaxx Overflow'}
+                        body={'Eliminate wasted vaccine due to canceled appointments.'}
+                        project={'project-one'}
+                        buttonText={'View case study'}
+                    />
+                </Link>
 
                 <PrimaryCard 
                     heading={'Mentor Hub'}
