@@ -17,7 +17,7 @@ const StyledButton = styled.button`
 `
 
 export default function Button(props) {
-    const { buttonText } = props
+    const { buttonText, className } = props
 
-    return <StyledButton>{buttonText}</StyledButton>
+    return <StyledButton className={className}>{buttonText}</StyledButton>
 }

@@ -30,6 +30,8 @@ const HeroContainer = styled.div`
 
         @media (min-width: 768px) {
             width: 566px;
+            font-size: 44px;
+            line-height: 48px;
         }
     }
 
@@ -44,7 +46,11 @@ const HeroContainer = styled.div`
         // border: 1px dotted orange;
 
         @media (min-width: 768px) {
+            margin-top: 12px;
+            margin-bottom: 32px;
             width: 566px;
+            font-size: 20px;
+            line-height: 24px;
         }
     }
 `
@@ -56,7 +62,7 @@ export default function HeroSlice(props) {
         <HeroContainer className={className}>
             <p className={'heading'}>{heading}</p>
             <p className={'body'}>{body}</p>
-            <Button buttonText={`Let's collaborate`} />
+            <Button className={'hero-button'} buttonText={`Let's collaborate`} />
         </HeroContainer>
     )
 }
