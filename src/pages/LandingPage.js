@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { HeroSlice } from '../components/Slice'
+import { PrimaryCard } from '../components/Project Card'
 import { white } from '../colors'
 
 const PageContainer = styled.div`
@@ -30,6 +31,7 @@ export default function LandingPage() {
                 heading={'Howdy. I am Stedman.'}
                 body={'I am a UX/Product Designer. I craft digital experiences with collaborative UX research & design methods.'}
             />
+        <PrimaryCard />
         </PageContainer>
     )
 }
