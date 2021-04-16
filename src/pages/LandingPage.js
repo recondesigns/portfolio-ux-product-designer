@@ -31,7 +31,12 @@ export default function LandingPage() {
                 heading={'Howdy. I am Stedman.'}
                 body={'I am a UX/Product Designer. I craft digital experiences with collaborative UX research & design methods.'}
             />
-        <PrimaryCard />
+        <PrimaryCard 
+            heading={'Vaxx Overflow'}
+            body={'Eliminate wasted vaccine due to canceled appointments.'}
+            project={'project-one'}
+            buttonText={'View case study'}
+        />
         </PageContainer>
     )
 }
