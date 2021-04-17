@@ -18,7 +18,6 @@ const CardContainer = styled.div`
     }
 
     &:hover {
-        // box-shadow: 0px 2px 4px rgba(65, 65, 65, 0.14), 0px 4px 5px rgba(65, 65, 65, 0.12), 0px 1px 10px rgba(65, 65, 65, 0.2);
         box-shadow: 0px 8px 10px rgba(65, 65, 65, 0.14), 0px 3px 14px rgba(65, 65, 65, 0.12), 0px 4px 5px rgba(65, 65, 65, 0.2);
     }
 
