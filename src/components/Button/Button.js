@@ -14,10 +14,15 @@ const StyledButton = styled.button`
     background: ${black.default};
     border: 2px solid ${white.default};
     border-radius: 4px;
+
+    &:hover {
+        background: white;
+        color: black;
+    }
 `
 
 export default function Button(props) {
-    const { buttonText, className } = props
+    const { buttonText, className, onClick } = props
 
-    return <StyledButton className={className}>{buttonText}</StyledButton>
+    return <StyledButton className={className} onClick={onClick} >{buttonText}</StyledButton>
 }

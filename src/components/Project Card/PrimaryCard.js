@@ -9,12 +9,21 @@ const CardContainer = styled.div`
     min-width: 260px;
     border: 1px solid #E6E6E6;
     background: ${white.default};
-    border-left: 2px solid ${green.default};
-    // border-radius: 4px;
+    border-left: 4px solid ${green.default};
+    border-radius: 0px 0px 0px 0px;
 
     @media (min-width: 768px) {
         margin-right: 12px;
         min-width: 328px;
+    }
+
+    &:hover {
+        // box-shadow: 0px 2px 4px rgba(65, 65, 65, 0.14), 0px 4px 5px rgba(65, 65, 65, 0.12), 0px 1px 10px rgba(65, 65, 65, 0.2);
+        box-shadow: 0px 8px 10px rgba(65, 65, 65, 0.14), 0px 3px 14px rgba(65, 65, 65, 0.12), 0px 4px 5px rgba(65, 65, 65, 0.2);
+    }
+
+    &:active {
+        box-shadow: 0px 2px 4px rgba(65, 65, 65, 0.14), 0px 3px 4px rgba(65, 65, 65, 0.12), 0px 1px 5px rgba(65, 65, 65, 0.2);
     }
 
     & > .heading {

@@ -75,19 +75,23 @@ export default function LandingPage() {
                     />
                 </Link>
 
-                <PrimaryCard 
-                    heading={'Mentor Hub'}
-                    body={'Eliminate wasted vaccine due to canceled appointments.'}
-                    project={'project-one'}
-                    buttonText={'View case study'}
-                />
+                <Link to={'/project-two'}>
+                    <PrimaryCard 
+                        heading={'Mentor Hub'}
+                        body={'Eliminate wasted vaccine due to canceled appointments.'}
+                        project={'project-one'}
+                        buttonText={'View case study'}
+                    />
+                </Link>
 
-                <PrimaryCard 
-                    heading={'V School Map'}
-                    body={'Eliminate wasted vaccine due to canceled appointments.'}
-                    project={'project-one'}
-                    buttonText={'View case study'}
-                />
+                <Link to={'/project-three'}>
+                    <PrimaryCard 
+                        heading={'V School Map'}
+                        body={'Eliminate wasted vaccine due to canceled appointments.'}
+                        project={'project-one'}
+                        buttonText={'View case study'}
+                    />
+                </Link>
             </div>
             
         </PageContainer>

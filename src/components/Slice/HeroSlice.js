@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useHistory } from 'react-router-dom'
 import { Button } from '../Button'
 import { black, white } from '../../colors'
 
@@ -56,13 +57,22 @@ const HeroContainer = styled.div`
 `
 
 export default function HeroSlice(props) {
+    let history = useHistory()
     const { heading, body, className } = props
+
+    function goToContact() {
+        history.push('/contact')
+    }
     
     return (
         <HeroContainer className={className}>
             <p className={'heading'}>{heading}</p>
             <p className={'body'}>{body}</p>
-            <Button className={'hero-button'} buttonText={`Let's collaborate`} />
+            <Button 
+                className={'hero-button'} 
+                buttonText={`Let's collaborate`} 
+                onClick={() => goToContact()}
+            />
         </HeroContainer>
     )
 }

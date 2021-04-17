@@ -22,9 +22,22 @@ const NavigationContainer = styled.div`
         width: 236px;
     }
 
-    & > .home-link {
-        margin-bottom: 4px;
-        // border: 1px dotted red;
+    // & > .home-link {
+    //     margin-bottom: 0px;
+    //     border: 1px dotted red;
+
+    //     &:hover {
+    //         font-weight: 500;
+    //         color: ${green.default};
+    //     }
+
+    //     &:active {
+    //         text-decoration: underline;
+    //     }
+    // }
+
+    & > .list-item {
+        margin-bottom: 0px;
 
         &:hover {
             font-weight: 500;
@@ -34,15 +47,11 @@ const NavigationContainer = styled.div`
         &:active {
             text-decoration: underline;
         }
-    }
-
-    & > .list-item {
-        margin-bottom: 4px;
         // border: 1px dotted blue;
     }
 
     & > .list-sub-item {
-        margin-bottom: 4px;
+        margin-bottom: 0px;
         padding: 0px 0px 0px 16px;
         font-family: Roboto;
         font-style: normal;
@@ -64,7 +73,9 @@ const NavigationContainer = styled.div`
 
 const Item = styled(Link)`
     margin: 0px;
+    height: 40px;
     display: flex;
+    // justify-content: center;
     align-items: center;
     font-family: Roboto;
     font-style: normal;
@@ -74,6 +85,10 @@ const Item = styled(Link)`
     color: ${black.default};
     text-decoration: none;
     // border: 1px dotted orange;
+
+    // @media (min-width: 768px) {
+        
+    // }
 `
 
 export default function Navigation() {
@@ -99,7 +114,7 @@ export default function Navigation() {
         <NavigationContainer display={navPosition}>
             <Item 
                 to={'/'}
-                className={'home-link'}
+                className={'list-item'}
                 onClick={() => closeMenu()}
             >{'Home'}</Item>
 
@@ -107,7 +122,7 @@ export default function Navigation() {
                 to={'/'}
                 className={'list-item'}
                 onClick={() => closeMenu()}
-            >{'Other UX Projects'}</Item>
+            >{'UX Design'}</Item>
 
             <Item 
                 to={'/project-one'}
@@ -126,6 +141,18 @@ export default function Navigation() {
                 className={'list-sub-item'}
                 onClick={() => closeMenu()}
             >{'V School Map'}</Item>
+
+            <Item 
+                to={'/contact'}
+                className={'list-item'}
+                onClick={() => closeMenu()}
+            >{'Contact'}</Item>
+
+            <Item 
+                to={'/about'}
+                className={'list-item'}
+                onClick={() => closeMenu()}
+            >{'About'}</Item>
         </NavigationContainer>
     )
 }
