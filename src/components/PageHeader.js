@@ -56,8 +56,18 @@ export default function PageHeader(props) {
         <PageHeaderContainer>
             <p className={'page-header'}>{heading}</p>
             <div className={'controls-wrapper'}>
-                <PageControls className={'one'} icon={iconOne} label={labelOne} />
-                <PageControls className={'two'} icon={iconTwo} label={labelTwo} />
+                <PageControls 
+                    className={'one'}
+                    icon={iconOne} 
+                    label={labelOne} 
+                    controlLink={'https://www.figma.com/file/JhhHkIswpe0EzcVcVtzB7A/VaxxOverflow?node-id=302%3A2030'}
+                />
+                <PageControls 
+                    className={'two'} 
+                    icon={iconTwo} 
+                    label={labelTwo} 
+                    controlLink={'#'}
+                />
             </div>
         </PageHeaderContainer>
     )

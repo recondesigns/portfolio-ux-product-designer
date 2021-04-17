@@ -19,7 +19,7 @@ const ControlContainer = styled.div`
         // border: 1px dotted orange;
     }
 
-    & > p {
+    & > a {
         box-sizing: border-box;
         margin: 0px;
         height: 20px;
@@ -29,6 +29,7 @@ const ControlContainer = styled.div`
         font-size: 16px;
         line-height: 20px;
         color: ${black.default};
+        text-decoration: none;
         // border: 1px dotted orange;
 
         @media (min-width: 768px) {
@@ -39,7 +40,7 @@ const ControlContainer = styled.div`
 
 export default function PageControls(props) {
     // let figmaLink = 'https://www.figma.com/proto/JhhHkIswpe0EzcVcVtzB7A/VaxxOverflow?page-id=188%3A4407&node-id=188%3A4408&viewport=655%2C467%2C0.2958570718765259&scaling=scale-down'
-    const { label, icon, className } = props
+    const { label, icon, className, controlLink } = props
 
     function setIcon() {
         if (icon === 'figma') {
@@ -56,7 +57,8 @@ export default function PageControls(props) {
     return (
         <ControlContainer className={className}>
             <img src={controlIcon} alt={label} />
-            <p className={'control-label'}>{label}</p>
+            <a className={'external-link'} href={controlLink} target={'_blank'} rel={'noreferrer'}>{label}</a>
+            {/* <p className={'control-label'}>{label}</p> */}
         </ControlContainer>
     )
 }
