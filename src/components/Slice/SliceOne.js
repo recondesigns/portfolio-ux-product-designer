@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import { black, white } from '../../colors/'
+import sectionOneImage from '../../assets/images/vaccine-procces.png'
+
+
 
 const SliceContainer = styled.div`
     box-sizing: border-box;
     padding: 40px 24px 40px 24px;
     height: auto;
-    // border: 1px solid blue;
+    border: 1px solid blue;
     // border: 2px solid ${white.dark};
 
     @media (min-width: 768px) {
@@ -48,15 +51,18 @@ const SliceContainer = styled.div`
 
     & > .image-wrapper {
         width: 100%;
-        // height: 200px;
+        min-height: 200px;
         height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        // border: 1px dotted orange;
+        // background-image: url(${sectionOneImage});
+        // background-position: contain;
+        // background-size: cover;
+        border: 1px dotted orange;
 
         & > img {
-            height: 312px;
+            // width: auto;
 
             @media (min-width: 768px) {
                 height: 400px
@@ -76,13 +82,15 @@ export default function SliceOne(props) {
         image
     } = props
 
+    console.log(image)
+
     return (
         <SliceContainer className={className}>
             <p className={'header header-top'}>{headingOne}</p>
             <p className={'body body-top'}>{bodyOne}</p>
             <p className={'header header-bottom'}>{headingTwo}</p>
             <p className={'body body-bottom'}>{bodyTwo}</p>
-            <div className={'image-wrapper'}>
+            <div className={'image-wrapper'} backgroundImage={image}>
                 <img src={image} alt={'preview'} />
             </div>
         </SliceContainer>

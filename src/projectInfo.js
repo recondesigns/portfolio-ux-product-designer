@@ -1,5 +1,6 @@
 // import section1Image from './assets/images/section1Image-1x.png'
-import sectionOneImage from './assets/images/sectionOneImage-2x.png'
+import sectionOneImage from './assets/images/vaccine-procces.png'
+
 
 export const sectionInfo = {
     vaxxOverflow: {
