@@ -52,13 +52,14 @@ const SliceContainer = styled.div`
     & > .image-wrapper {
         width: 100%;
         min-height: 200px;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        // background-image: url(${sectionOneImage});
-        // background-position: contain;
-        // background-size: cover;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        background-image: url(${sectionOneImage});
+        // background-position: center;
+        // background-size: contain;
+        background-repeat: no-repeat;
+        // overflow: hidden;
         border: 1px dotted orange;
 
         & > img {
@@ -90,8 +91,8 @@ export default function SliceOne(props) {
             <p className={'body body-top'}>{bodyOne}</p>
             <p className={'header header-bottom'}>{headingTwo}</p>
             <p className={'body body-bottom'}>{bodyTwo}</p>
-            <div className={'image-wrapper'} backgroundImage={image}>
-                <img src={image} alt={'preview'} />
+            <div className={'image-wrapper'} backgroundimage={image}>
+                {/* <img src={image} alt={'preview'} /> */}
             </div>
         </SliceContainer>
     )
