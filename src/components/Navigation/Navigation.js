@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ListItem from './ListItem'
+import Button from '../Button'
 
 const NavigationContainer = styled.nav`
     z-index: 3;    
@@ -15,7 +16,6 @@ const NavigationContainer = styled.nav`
     @media (min-width: 768px) {
         grid-column: app-start / span 3;
         grid-row: 2 / span 2;
-        display: block;
         z-index: 2;
     }
 
@@ -23,6 +23,10 @@ const NavigationContainer = styled.nav`
         margin-top: 144px;
         color: #6082BF;
         text-transform: uppercase;
+
+        @media (min-width: 768px) {
+            margin-top: 48px;
+        }
     }
 
     & > .role-title {
@@ -32,14 +36,21 @@ const NavigationContainer = styled.nav`
     & > .contact-title {
         margin-top: 20px;
     }
+
+    & > .menu-button {
+        margin-top: 104px;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
 `
 
 export default function Navigation() {
     return (
         <NavigationContainer>
-            {/* <p>Navigation</p> */}
             <ListItem type={'default'} className={'home'} text={'Home'} />
-            
+
             <ListItem type={'default'} className={'role-title'} text={'UX Designer'} />
             <ListItem type={'sub'} className={''} text={'Vaxx Overflow'} />
             <ListItem type={'sub'} className={''} text={'Mentor Hub'} />
@@ -53,6 +64,11 @@ export default function Navigation() {
             <ListItem type={'default'} className={'contact-title'} text={'Contact'} />
             <ListItem type={'default'} className={'about-title'} text={'About'} />
 
+            <Button 
+                type={'secondary'}
+                buttonText={'Close menu'} 
+                className={'menu-button'}
+            />
         </NavigationContainer>
     )
 }
