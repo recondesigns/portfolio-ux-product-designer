@@ -3,8 +3,10 @@ import styled from 'styled-components'
 import ListItem from './ListItem'
 
 const NavigationContainer = styled.nav`
-    z-index: 3;
-    // display: none;
+    z-index: 3;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-column: app-start / app-end;
     grid-row: 1 / span 2;
     background: white;
@@ -12,20 +14,45 @@ const NavigationContainer = styled.nav`
     
     @media (min-width: 768px) {
         grid-column: app-start / span 3;
+        grid-row: 2 / span 2;
         display: block;
         z-index: 2;
     }
 
-    & > p {
-        margin: 0px;
+    & > .home {
+        margin-top: 144px;
+        color: #6082BF;
+        text-transform: uppercase;
+    }
+
+    & > .role-title {
+        margin-top: 20px;
+    }
+
+    & > .contact-title {
+        margin-top: 20px;
     }
 `
 
 export default function Navigation() {
     return (
         <NavigationContainer>
-            <p>Navigation</p>
-            <ListItem />
+            {/* <p>Navigation</p> */}
+            <ListItem type={'default'} className={'home'} text={'Home'} />
+            
+            <ListItem type={'default'} className={'role-title'} text={'UX Designer'} />
+            <ListItem type={'sub'} className={''} text={'Vaxx Overflow'} />
+            <ListItem type={'sub'} className={''} text={'Mentor Hub'} />
+            <ListItem type={'sub'} className={''} text={'V School Map'} />
+
+            <ListItem type={'default'} className={'role-title'} text={'Developer'} />
+            <ListItem type={'sub'} className={''} text={'Project 1'} />
+            <ListItem type={'sub'} className={''} text={'Project 2'} />
+            <ListItem type={'sub'} className={''} text={'Project 3'} />
+
+            <ListItem type={'default'} className={'contact-title'} text={'Contact'} />
+            <ListItem type={'default'} className={'about-title'} text={'About'} />
+
         </NavigationContainer>
     )
 }
