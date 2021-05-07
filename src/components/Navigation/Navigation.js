@@ -9,7 +9,7 @@ const NavigationContainer = styled.nav`
     flex-direction: column;
     align-items: center;
     grid-column: app-start / app-end;
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 3;
     background: white;
     border: 2px dashed gray;
     

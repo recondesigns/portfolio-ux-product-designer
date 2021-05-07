@@ -1,6 +1,1 @@
-export { default as LandingPage } from './LandingPage'
-export { default as ProjectOne } from './UXProjectOne'
-export { default as ProjectTwo } from './UXProjectTwo'
-export { default as ProjectThree } from './UXProjectThree'
-export { default as About } from './About'
-export { default as Contact } from './Contact'
+export { default as Landing } from './Landing'

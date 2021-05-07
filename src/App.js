@@ -27,12 +27,14 @@ const AppContainer = styled.div`
   & > .page-wrapper {
     z-index: 1;
     grid-column: app-start / app-end;
-    grid-row: 2;
+    grid-row: 2 / span 2;
     padding: 64px 16px 0px 16px;
     border: 2px dashed blue;
 
     @media (min-width: 768px) {
-      grid-column: 4 / span 12;
+      grid-column: 4 / span 11;
+      grid-row: 2 / span 2;
+
       // background: pink;
     }
 
