@@ -40,11 +40,6 @@ const AppContainer = styled.div`
       border: 1px solid orange;
       margin: 0px 0px 20px 0px;
     }
-
-    & > h4 {
-      border: 1px solid orange;
-      margin: 0px;
-    }
   }
 `
 
@@ -56,8 +51,6 @@ export default function App() {
       <Navigation />
       <div className={'page-wrapper'}>
         <p>Page</p>
-        <h4>h4age</h4>
-
       </div>
     </AppContainer>
   )
