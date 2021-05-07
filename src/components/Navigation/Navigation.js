@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import ListItem from './ListItem'
 
 const NavigationContainer = styled.nav`
     z-index: 3;
@@ -24,6 +25,7 @@ export default function Navigation() {
     return (
         <NavigationContainer>
             <p>Navigation</p>
+            <ListItem />
         </NavigationContainer>
     )
 }
