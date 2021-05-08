@@ -5,7 +5,7 @@ import Button from '../Button'
 
 const NavigationContainer = styled.nav`
     z-index: 3;    
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     grid-column: app-start / app-end;
@@ -14,6 +14,7 @@ const NavigationContainer = styled.nav`
     border: 2px dashed gray;
     
     @media (min-width: 768px) {
+        display: flex;
         grid-column: app-start / span 3;
         grid-row: 2 / span 2;
         z-index: 2;

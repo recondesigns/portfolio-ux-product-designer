@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Switch, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Navigation from './components/Navigation/Navigation'
+import { Landing, Designer, Dev } from './pages/'
 
 const AppContainer = styled.div`
   position: absolute;
@@ -28,7 +30,7 @@ const AppContainer = styled.div`
     z-index: 1;
     grid-column: app-start / app-end;
     grid-row: 2 / span 2;
-    padding: 64px 16px 0px 16px;
+    // padding: 64px 16px 0px 16px;
     border: 2px dashed blue;
 
     @media (min-width: 768px) {
@@ -52,7 +54,19 @@ export default function App() {
       <Header />
       <Navigation />
       <div className={'page-wrapper'}>
-        <p>Page</p>
+        <Switch>
+          <Route exact path={'/'}>
+            <Landing />
+          </Route>
+
+          <Route exact path={'/ux-product-designer'}>
+            <Designer />
+          </Route>
+
+          <Route exact path={'/developer'}>
+            <Dev />
+          </Route>
+        </Switch>
       </div>
     </AppContainer>
   )
