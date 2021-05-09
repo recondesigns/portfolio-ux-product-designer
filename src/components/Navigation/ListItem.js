@@ -17,7 +17,6 @@ const StyledItem = styled.p`
     border-radius: 4px;
     background: white;
     cursor: pointer;
-    // border: 1px dotted orange;
 
     &:hover {
         border: 2px solid #E3FCE3;

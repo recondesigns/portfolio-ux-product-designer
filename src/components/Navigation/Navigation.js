@@ -7,7 +7,7 @@ import Button from '../Button'
 const NavigationContainer = styled.nav`
     position: relative;
     z-index: 3;    
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     grid-column: app-start / app-end;
@@ -55,7 +55,6 @@ const NavigationContainer = styled.nav`
         align-items: center;
         color: #414141;
         border-radius: 4px;
-        // border: 1px dotted orange;
     }
 
     & > .menu-button {
