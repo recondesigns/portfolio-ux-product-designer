@@ -50,9 +50,16 @@ const PageContainer = styled.div`
         border: 1px solid orange;
     }
 
-    & > a {
-        text-decoration: none;
+    & > .cards-wrapper {
+        display: flex;
+        gap: 20px;
+
+        & > a {
+            text-decoration: none;
+        }
     }
+
+    
 `
 
 export default function Landing() {
@@ -67,13 +74,32 @@ export default function Landing() {
             />
 
             <p className={'heading'}>{'Featured projects'}</p>
-            <Link to={'/vaxx-overflow'}>
-                <FeatureCard
-                    title={'Vaxx Overflow'}
-                    body={'Eliminate wasted vaccine due to canceled appointments.'}
-                    textLink={'View case study'}
-                />
-            </Link>
+            <div className={'cards-wrapper'}>
+                <Link to={'/vaxx-overflow'}>
+                    <FeatureCard
+                        title={'Vaxx Overflow'}
+                        body={'Eliminate wasted vaccine due to canceled appointments.'}
+                        textLink={'View case study'}
+                    />
+                </Link>
+
+                <Link to={'/mentor-hub'}>
+                    <FeatureCard
+                        title={'Mentor Hub'}
+                        body={'Eliminate wasted vaccine due to canceled appointments.'}
+                        textLink={'View case study'}
+                    />
+                </Link>
+
+                <Link to={'/op-veteran'}>
+                    <FeatureCard
+                        title={'OP Veteran'}
+                        body={'Eliminate wasted vaccine due to canceled appointments.'}
+                        textLink={'View case study'}
+                    />
+                </Link>
+            </div>
+            
         </PageContainer>
     )
 }
