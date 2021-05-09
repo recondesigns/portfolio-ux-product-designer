@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Switch, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Navigation from './components/Navigation/Navigation'
-import { Landing, Designer, Dev } from './pages/'
+import { Landing, VaxxPage } from './pages/'
 
 const AppContainer = styled.div`
   position: absolute;
@@ -23,21 +23,17 @@ const AppContainer = styled.div`
     grid-template-columns: [app-start] 24px repeat(12, 1fr) 24px [app-end];
     grid-template-rows: 56px auto;  
     grid-column-gap: 20px;
-    // background: pink;
   }
 
   & > .page-wrapper {
     z-index: 1;
     grid-column: app-start / app-end;
     grid-row: 2 / span 2;
-    // padding: 64px 16px 0px 16px;
     border: 2px dashed blue;
 
     @media (min-width: 768px) {
       grid-column: 4 / span 11;
       grid-row: 2 / span 2;
-
-      // background: pink;
     }
 
     & > p {
@@ -59,12 +55,8 @@ export default function App() {
             <Landing />
           </Route>
 
-          <Route exact path={'/ux-product-designer'}>
-            <Designer />
-          </Route>
-
-          <Route exact path={'/developer'}>
-            <Dev />
+          <Route path={'/vaxx-overflow'}>
+            <VaxxPage />
           </Route>
         </Switch>
       </div>

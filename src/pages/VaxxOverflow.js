@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const PageContainer = styled.div`
+const VaxxPageContainer = styled.div`
     height: 100%;
     padding: 0px 16px 0px 16px;
-    background: lightblue;
+    background: lightgreen;
 
     & > .title {
         margin: 0px;
@@ -17,11 +17,11 @@ const PageContainer = styled.div`
     }
 `
 
-export default function Landing() {
+export default function VaxxOverflow() {
     return (
-        <PageContainer>
-            <p className={'title'}>{'Howdy. I am Stedman'}</p>
+        <VaxxPageContainer>
+            <p className={'title'}>{'Vaxx Overflow Page'}</p>
             {/* <p className={'body'}>{'Some other text.'}</p> */}
-        </PageContainer>
+        </VaxxPageContainer>
     )
 }

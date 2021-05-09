@@ -1,3 +1,2 @@
 export { default as Landing } from './Landing'
-export { Designer } from './Designer/'
-export { Dev } from './Developer/'
+export { default as VaxxPage } from './VaxxOverflow'

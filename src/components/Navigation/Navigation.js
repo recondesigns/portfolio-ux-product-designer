@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import ListItem from './ListItem'
 import Button from '../Button'
 
@@ -30,10 +31,6 @@ const NavigationContainer = styled.nav`
         }
     }
 
-    & > .role-title {
-        margin-top: 20px;
-    }
-
     & > .contact-title {
         margin-top: 20px;
     }
@@ -45,19 +42,37 @@ const NavigationContainer = styled.nav`
             display: none;
         }
     }
+
+    & > .menu-section {
+        width: 164px;
+        height: 36px;
+        margin: 20px 0px 0px 0px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #414141;
+    }
 `
 
 export default function Navigation() {
     return (
         <NavigationContainer>
-            <ListItem type={'default'} className={'home'} text={'Home'} />
+            <Link to={'/'}>
+                <ListItem type={'default'} className={'home'} text={'Home'} />
+            </Link>
+            {/* <ListItem type={'default'} className={'home'} text={'Home'} /> */}
 
-            <ListItem type={'default'} className={'role-title'} text={'UX Designer'} />
+            <p className={'menu-section'}>{'UX Designer'}</p>
             <ListItem type={'sub'} className={''} text={'Vaxx Overflow'} />
             <ListItem type={'sub'} className={''} text={'Mentor Hub'} />
             <ListItem type={'sub'} className={''} text={'V School Map'} />
 
-            <ListItem type={'default'} className={'role-title'} text={'Developer'} />
+            <p className={'menu-section'}>{'Developer'}</p>
             <ListItem type={'sub'} className={''} text={'Project 1'} />
             <ListItem type={'sub'} className={''} text={'Project 2'} />
             <ListItem type={'sub'} className={''} text={'Project 3'} />
