@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 const CardContainer = styled.div`
-    // margin-top: 48px;
     border: 1px solid #E6E6E6;
     box-sizing: border-box;
     border-radius: 4px;

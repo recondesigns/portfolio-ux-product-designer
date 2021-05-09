@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { AppStateContext } from '../../context/AppState'
 import ListItem from './ListItem'
 import Button from '../Button'
 
 const NavigationContainer = styled.nav`
     position: relative;
     z-index: 3;    
-    display: none;
+    display: ${props => props.display};
     flex-direction: column;
     align-items: center;
     grid-column: app-start / app-end;
@@ -26,14 +27,29 @@ const NavigationContainer = styled.nav`
         margin-top: 144px;
         color: #6082BF;
         text-transform: uppercase;
+        border-radius: 4px;
+        // border: 1px dotted orange;
 
         @media (min-width: 768px) {
             margin-top: 48px;
         }
     }
 
-    & > .contact-title {
+    & > .about {
+        color: #6082BF;
+        border-radius: 4px;
+        // border: 1px dotted orange;
+
+        @media (min-width: 768px) {
+            // margin-top: 48px;
+        }
+    }
+
+    & > .contact {
         margin-top: 20px;
+        color: #6082BF;
+        border-radius: 4px;
+        // border: 1px dotted orange;
     }
 
     & > a {
@@ -55,11 +71,12 @@ const NavigationContainer = styled.nav`
         align-items: center;
         color: #414141;
         border-radius: 4px;
+        // border: 1px dotted orange;
+
     }
 
     & > .menu-button {
-        position: absolute;
-        bottom: 40px;
+        margin-top: 80px;
 
         @media (min-width: 768px) {
             display: none;
@@ -68,30 +85,55 @@ const NavigationContainer = styled.nav`
 `
 
 export default function Navigation() {
+    const [isMenuOpen, setIsMenuOpen] = useContext(AppStateContext)
+
+    function setMobileDisplay(status) {
+        if (status === false) {
+            return 'none'
+        } else if (status === true) {
+            return 'flex'
+        }
+    }
+
+    let mobileDisplay = setMobileDisplay(isMenuOpen)
+
+    function closeMenu() {
+        setIsMenuOpen(() => false)
+    }
+
     return (
-        <NavigationContainer>
-            <Link to={'/'} className={'home'}>
+        <NavigationContainer display={mobileDisplay}>
+            <Link to={'/'} className={'home'} onClick={() => closeMenu()}>
                 <ListItem type={'default'} className={'home'} text={'Home'} />
             </Link>
 
             <p className={'menu-section'}>{'UX Designer'}</p>
 
-            <Link to={'/vaxx-overflow'}>
+            <Link to={'/vaxx-overflow'} onClick={() => closeMenu()}>
                 <ListItem type={'sub'} text={'Vaxx Overflow'} />
             </Link>
 
-            <Link to={'/mentor-hub'}>
+            <Link to={'/mentor-hub'} onClick={() => closeMenu()}>
                 <ListItem type={'sub'} text={'Mentor Hub'} />
             </Link>
 
-            <Link to={'/op-veteran'}>
+            <Link to={'/op-veteran'} onClick={() => closeMenu()}>
                 <ListItem type={'sub'} text={'OP Veteran'} />
+            </Link>
+
+            <Link to={'/'} className={'contact'} onClick={() => closeMenu()}>
+                <ListItem type={'default'} text={'Contact'} />
+            </Link>
+
+            <Link to={'/'} className={'about'} onClick={() => closeMenu()}>
+                <ListItem type={'default'} text={'About'} />
             </Link>
 
             <Button 
                 type={'secondary'}
                 buttonText={'Close menu'} 
                 className={'menu-button'}
+                onClick={() => closeMenu()}
             />
         </NavigationContainer>
     )

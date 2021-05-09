@@ -85,8 +85,6 @@ const PageContainer = styled.div`
             text-decoration: none;
         }
     }
-
-    
 `
 
 export default function Landing() {
@@ -131,7 +129,6 @@ export default function Landing() {
                     />
                 </Link>
             </div>
-            
         </PageContainer>
     )
 }

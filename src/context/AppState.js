@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 
-export const AppContext = React.createContext()
+export const AppStateContext = React.createContext()
 
 export default function AppState({ children }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    
+
     return (
-        <AppContext.Provider value={[isMenuOpen, setIsMenuOpen]}>
+        <AppStateContext.Provider value={[isMenuOpen, setIsMenuOpen]}>
             { children }
-        </AppContext.Provider>
+        </AppStateContext.Provider>
     )
 }

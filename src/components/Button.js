@@ -16,7 +16,7 @@ const StyledButton = styled.button`
 `
 
 export default function Button(props) {
-    const { buttonText, className, type } = props
+    const { buttonText, className, type, onClick } = props
     const {
         backgroundColor,
         border,
@@ -44,5 +44,6 @@ export default function Button(props) {
                 backgroundColor={backgroundColor}
                 border={border}
                 padding={padding}
+                onClick={onClick}
             >{buttonText}</StyledButton>
 }
