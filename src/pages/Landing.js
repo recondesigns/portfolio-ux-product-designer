@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import FeatureCard from '../components/FeatureCard'
 
 const PageContainer = styled.div`
     height: 100%;
     padding: 0px 16px 0px 16px;
-    background: lightblue;
+    background: #FEFEFE;
 
     & > .title {
         margin: 0px;
@@ -48,6 +49,10 @@ const PageContainer = styled.div`
         align-items: center;
         border: 1px solid orange;
     }
+
+    & > a {
+        text-decoration: none;
+    }
 `
 
 export default function Landing() {
@@ -62,7 +67,13 @@ export default function Landing() {
             />
 
             <p className={'heading'}>{'Featured projects'}</p>
-            <FeatureCard />
+            <Link to={'/vaxx-overflow'}>
+                <FeatureCard
+                    title={'Vaxx Overflow'}
+                    body={'Eliminate wasted vaccine due to canceled appointments.'}
+                    textLink={'View case study'}
+                />
+            </Link>
         </PageContainer>
     )
 }

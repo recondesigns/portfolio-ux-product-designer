@@ -12,7 +12,7 @@ const NavigationContainer = styled.nav`
     align-items: center;
     grid-column: app-start / app-end;
     grid-row: 1 / span 3;
-    background: white;
+    background: #FEFEFE;
     border: 2px dashed gray;
     
     @media (min-width: 768px) {

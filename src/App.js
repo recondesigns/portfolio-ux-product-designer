@@ -18,6 +18,8 @@ const AppContainer = styled.div`
   grid-column-gap: 16px;
   box-sizing: border-box;
   border: 2px solid purple;
+  background: #FEFEFE;
+
 
   @media (min-width: 768px) {
     grid-template-columns: [app-start] 24px repeat(12, 1fr) 24px [app-end];
