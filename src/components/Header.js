@@ -7,7 +7,7 @@ const HeaderContainer = styled.div`
     grid-column: app-start / app-end;
     grid-row: 1;
     background: white;
-    border: 2px dashed black;
+    // border: 2px dashed black;
     
     @media (min-width: 768px) {
         z-index: 3;

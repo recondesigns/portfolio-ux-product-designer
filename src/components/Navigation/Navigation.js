@@ -13,7 +13,7 @@ const NavigationContainer = styled.nav`
     grid-column: app-start / app-end;
     grid-row: 1 / span 3;
     background: #FEFEFE;
-    border: 2px dashed gray;
+    // border: 2px dashed gray;
     
     @media (min-width: 768px) {
         display: flex;

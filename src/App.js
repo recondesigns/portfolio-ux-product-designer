@@ -17,7 +17,7 @@ const AppContainer = styled.div`
   grid-template-rows: 96px auto;
   grid-column-gap: 16px;
   box-sizing: border-box;
-  border: 2px solid purple;
+  // border: 2px solid purple;
   background: #FEFEFE;
 
 
@@ -31,7 +31,7 @@ const AppContainer = styled.div`
     z-index: 1;
     grid-column: app-start / app-end;
     grid-row: 2 / span 2;
-    border: 2px dashed blue;
+    // border: 2px dashed blue;
 
     @media (min-width: 768px) {
       grid-column: 4 / span 11;
