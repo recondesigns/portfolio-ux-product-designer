@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import Button from '../components/Button'
+import FeatureCard from '../components/FeatureCard'
 
 const PageContainer = styled.div`
     height: 100%;
@@ -29,6 +31,23 @@ const PageContainer = styled.div`
         color: #414141;
         border: 1px solid green;
     }
+
+    & > .heading {
+        margin: 0px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #414141;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid orange;
+    }
 `
 
 export default function Landing() {
@@ -36,6 +55,14 @@ export default function Landing() {
         <PageContainer>
             <p className={'title'}>{'Howdy. I am Stedman.'}</p>
             <p className={'body'}>{'I am a UX/Product Designer. I craft digital experiences with collaborative UX research & design methods.'}</p>
+            <Button 
+                type={'secondary'}
+                buttonText={'Close menu'} 
+                className={''}
+            />
+
+            <p className={'heading'}>{'Featured projects'}</p>
+            <FeatureCard />
         </PageContainer>
     )
 }
