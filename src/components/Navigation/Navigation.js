@@ -5,8 +5,9 @@ import ListItem from './ListItem'
 import Button from '../Button'
 
 const NavigationContainer = styled.nav`
+    position: relative;
     z-index: 3;    
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     grid-column: app-start / app-end;
@@ -35,15 +36,12 @@ const NavigationContainer = styled.nav`
         margin-top: 20px;
     }
 
-    & > .menu-button {
-        margin-top: 104px;
-
-        @media (min-width: 768px) {
-            display: none;
-        }
+    & > a {
+        text-decoration: none;
     }
 
     & > .menu-section {
+        box-sizing: border-box;
         width: 164px;
         height: 36px;
         margin: 20px 0px 0px 0px;
@@ -56,29 +54,40 @@ const NavigationContainer = styled.nav`
         justify-content: center;
         align-items: center;
         color: #414141;
+        border-radius: 4px;
+        // border: 1px dotted orange;
+    }
+
+    & > .menu-button {
+        position: absolute;
+        bottom: 40px;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
     }
 `
 
 export default function Navigation() {
     return (
         <NavigationContainer>
-            <Link to={'/'}>
+            <Link to={'/'} className={'home'}>
                 <ListItem type={'default'} className={'home'} text={'Home'} />
             </Link>
-            {/* <ListItem type={'default'} className={'home'} text={'Home'} /> */}
 
             <p className={'menu-section'}>{'UX Designer'}</p>
-            <ListItem type={'sub'} className={''} text={'Vaxx Overflow'} />
-            <ListItem type={'sub'} className={''} text={'Mentor Hub'} />
-            <ListItem type={'sub'} className={''} text={'V School Map'} />
 
-            <p className={'menu-section'}>{'Developer'}</p>
-            <ListItem type={'sub'} className={''} text={'Project 1'} />
-            <ListItem type={'sub'} className={''} text={'Project 2'} />
-            <ListItem type={'sub'} className={''} text={'Project 3'} />
+            <Link to={'/vaxx-overflow'}>
+                <ListItem type={'sub'} text={'Vaxx Overflow'} />
+            </Link>
 
-            <ListItem type={'default'} className={'contact-title'} text={'Contact'} />
-            <ListItem type={'default'} className={'about-title'} text={'About'} />
+            <Link to={'/mentor-hub'}>
+                <ListItem type={'sub'} text={'Mentor Hub'} />
+            </Link>
+
+            <Link to={'/op-veteran'}>
+                <ListItem type={'sub'} text={'OP Veteran'} />
+            </Link>
 
             <Button 
                 type={'secondary'}
