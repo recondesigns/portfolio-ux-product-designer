@@ -20,7 +20,7 @@ const PageContainer = styled.div`
 export default function Landing() {
     return (
         <PageContainer>
-            <p className={'title'}>{'Howdy. I am Stedman'}</p>
+            {/* <p className={'title'}>{'Howdy. I am Stedman'}</p> */}
             {/* <p className={'body'}>{'Some other text.'}</p> */}
         </PageContainer>
     )
