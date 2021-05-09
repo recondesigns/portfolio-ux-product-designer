@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Switch, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Navigation from './components/Navigation/Navigation'
-import { Landing, VaxxPage, MentorPage, OPVetPage } from './pages/'
+import { Landing, VaxxPage, MentorPage, OPVetPage, AboutPage, ContactPage } from './pages/'
 
 const AppContainer = styled.div`
   position: absolute;
@@ -67,6 +67,14 @@ export default function App() {
 
           <Route path={'/op-veteran'}>
             <OPVetPage />
+          </Route>
+
+          <Route path={'/contact'}>
+            <ContactPage />
+          </Route>
+
+          <Route path={'/about'}>
+            <AboutPage />
           </Route>
         </Switch>
       </div>

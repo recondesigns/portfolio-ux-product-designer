@@ -121,11 +121,11 @@ export default function Navigation() {
                 <ListItem type={'sub'} text={'OP Veteran'} />
             </Link>
 
-            <Link to={'/'} className={'contact'} onClick={() => closeMenu()}>
+            <Link to={'/contact'} className={'contact'} onClick={() => closeMenu()}>
                 <ListItem type={'default'} text={'Contact'} />
             </Link>
 
-            <Link to={'/'} className={'about'} onClick={() => closeMenu()}>
+            <Link to={'/about'} className={'about'} onClick={() => closeMenu()}>
                 <ListItem type={'default'} text={'About'} />
             </Link>
 
