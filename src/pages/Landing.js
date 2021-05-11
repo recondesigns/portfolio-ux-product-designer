@@ -5,7 +5,7 @@ import Button from '../components/Button'
 import FeatureCard from '../components/FeatureCard'
 
 const PageContainer = styled.div`
-    min-height: 100%;
+    height: 100vh;
     padding: 64px 16px 0px 16px;
     background: #FEFEFE;
 
