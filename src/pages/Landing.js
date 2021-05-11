@@ -102,6 +102,15 @@ const PageContainer = styled.div`
                 // border: 2px solid red;
             }
         }
+
+        & > .third-card {
+            margin: 0px 0px 20px 0px;
+
+            @media (min-width: 768px) {
+                margin: 0px 0px 0px 0px;
+                // border: 2px solid red;
+            }
+        }
     }
 `
 
