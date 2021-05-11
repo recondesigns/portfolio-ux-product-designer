@@ -5,7 +5,7 @@ import Button from '../components/Button'
 import FeatureCard from '../components/FeatureCard'
 
 const PageContainer = styled.div`
-    height: 100vh;
+    height: 100%;
     padding: 64px 16px 0px 16px;
     background: #FEFEFE;
 
@@ -75,7 +75,7 @@ const PageContainer = styled.div`
     & > .cards-wrapper {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        // gap: 20px;
 
         @media (min-width: 768px) {
             flex-direction: row;
@@ -83,6 +83,24 @@ const PageContainer = styled.div`
  
         & > a {
             text-decoration: none;
+        }
+
+        & > .first-card {
+            margin: 0px 0px 20px 0px;
+
+            @media (min-width: 768px) {
+                margin: 0px 20px 0px 0px;
+                // border: 2px solid red;
+            }
+        }
+
+        & > .second-card {
+            margin: 0px 0px 20px 0px;
+
+            @media (min-width: 768px) {
+                margin: 0px 20px 0px 0px;
+                // border: 2px solid red;
+            }
         }
     }
 `
@@ -105,7 +123,7 @@ export default function Landing() {
 
             <p className={'heading'}>{'Featured projects'}</p>
             <div className={'cards-wrapper'}>
-                <Link to={'/vaxx-overflow'}>
+                <Link to={'/vaxx-overflow'} className={'first-card'}>
                     <FeatureCard
                         title={'Vaxx Overflow'}
                         body={'Eliminate wasted vaccine due to canceled appointments.'}
@@ -113,7 +131,7 @@ export default function Landing() {
                     />
                 </Link>
 
-                <Link to={'/mentor-hub'}>
+                <Link to={'/mentor-hub'} className={'second-card'}>
                     <FeatureCard
                         title={'Mentor Hub'}
                         body={'Eliminate wasted vaccine due to canceled appointments.'}
@@ -121,7 +139,7 @@ export default function Landing() {
                     />
                 </Link>
 
-                <Link to={'/op-veteran'}>
+                <Link to={'/op-veteran'} className={'third-card'}>
                     <FeatureCard
                         title={'OP Veteran'}
                         body={'Eliminate wasted vaccine due to canceled appointments.'}

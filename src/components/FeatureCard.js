@@ -65,10 +65,10 @@ const CardContainer = styled.div`
 `
 
 export default function FeatureCard(props) {
-    const { title, body, textLink } = props
+    const { title, body, textLink, className } = props
 
     return (
-        <CardContainer>
+        <CardContainer className={className}>
             <p className={'heading'}>{title}</p>
             <p className={'body'}>{body}</p>
             <p className={'card-link'}>{textLink}</p>
